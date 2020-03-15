@@ -1,13 +1,8 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!--把内容单元封装在view内部，写法：<view>"内容”</view>-->
+<view class='container'>
+  <image src='{{src}}'></image>
+  <text>{{name}}</text>  <!-- {{}}存放变量 -->
+  <button open-type="getUserInfo" bindgetuserinfo="getMyInfo">点击获取头像和昵称</button>
+  <!-- open-type="getUserInfo" 表示激活获取微信用户信息功能 
+  bindgetuserinfo="getMyInfo" 表示获得的数据将传递给自定义函数getMyInfo -->
 </view>

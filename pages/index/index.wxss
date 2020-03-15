@@ -1,21 +1,16 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 样式设计 */
+.container{
+  height: 100vh;/*高100视窗*/
+  display: flex;/*flex布局方法*/
+  flex-direction: column;/*垂直布局*/
+  align-items: center;/*水平居中*/
+  justify-content: space-around;/*垂直方向分散布局*/
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+image{
+  width:400rpx;/*图片宽度*/
+  border-radius: 50%;/*4个角变为圆角形状*/
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+text{
+  font-size: 50rpx;/*字体大小*/
+  color: red;
 }
